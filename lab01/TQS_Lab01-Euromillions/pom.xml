@@ -14,13 +14,6 @@
             <version>${junit.jupiter.version}</version>
             <scope>test</scope>
         </dependency>
-
-        <dependency>
-            <groupId>org.jacoco</groupId>
-            <artifactId>jacoco-maven-plugin</artifactId>
-            <version>0.8.4</version>
-            <type>maven-plugin</type>
-        </dependency>
     </dependencies>
 
 
@@ -28,15 +21,13 @@
         <plugins>
             <!-- JUnit 5 requires Surefire version 2.22.1 or higher -->
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.2</version>
+                <version>3.0.0-M5</version>
             </plugin>
-
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.4</version>
+                <version>0.8.6</version>
                 <executions>
                     <execution>
                         <goals>
@@ -53,8 +44,6 @@
                 </executions>
             </plugin>
         </plugins>
-
-
     </build>
 
     <properties>

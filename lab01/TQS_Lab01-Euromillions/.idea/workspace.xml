@@ -29,47 +29,14 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
-  <component name="RunManager" selected="JUnit.SetOfNaturalsTest">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SetOfNaturalsTest.testAddInvalidElement">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DipTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="euromillions-play" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="euromillions.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="euromillions" />
-      <option name="MAIN_CLASS_NAME" value="euromillions.DipTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DipTest.testConstructorFromBadArrays" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="euromillions-play" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="euromillions.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="euromillions" />
-      <option name="MAIN_CLASS_NAME" value="euromillions.DipTest" />
-      <option name="METHOD_NAME" value="testConstructorFromBadArrays" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -104,7 +71,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SetOfNaturalsTest.testDuplicatesFromArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SetOfNaturalsTest.testAddInvalidElement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="euromillions-play" />
       <extension name="coverage">
         <pattern>
@@ -114,7 +81,39 @@
       </extension>
       <option name="PACKAGE_NAME" value="sets" />
       <option name="MAIN_CLASS_NAME" value="sets.SetOfNaturalsTest" />
-      <option name="METHOD_NAME" value="testDuplicatesFromArray" />
+      <option name="METHOD_NAME" value="testAddInvalidElement" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SetOfNaturalsTest.testIntersectForNoIntersection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="euromillions-play" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sets.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="sets" />
+      <option name="MAIN_CLASS_NAME" value="sets.SetOfNaturalsTest" />
+      <option name="METHOD_NAME" value="testIntersectForNoIntersection" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SetOfNaturalsTest.testIntersectForValidIntersection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="euromillions-play" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sets.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="sets" />
+      <option name="MAIN_CLASS_NAME" value="sets.SetOfNaturalsTest" />
+      <option name="METHOD_NAME" value="testIntersectForValidIntersection" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -122,11 +121,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SetOfNaturalsTest.testAddInvalidElement" />
+        <item itemvalue="JUnit.SetOfNaturalsTest.testIntersectForValidIntersection" />
+        <item itemvalue="JUnit.SetOfNaturalsTest.testIntersectForNoIntersection" />
         <item itemvalue="JUnit.SetOfNaturalsTest" />
         <item itemvalue="JUnit.EuromillionsDrawTest" />
-        <item itemvalue="JUnit.DipTest" />
-        <item itemvalue="JUnit.DipTest.testConstructorFromBadArrays" />
-        <item itemvalue="JUnit.SetOfNaturalsTest.testDuplicatesFromArray" />
       </list>
     </recent_temporary>
   </component>
@@ -146,6 +145,7 @@
       <workItem from="1615983015305" duration="122000" />
       <workItem from="1615983262210" duration="2773000" />
       <workItem from="1615992431045" duration="1218000" />
+      <workItem from="1616317465218" duration="454000" />
     </task>
     <servers />
   </component>

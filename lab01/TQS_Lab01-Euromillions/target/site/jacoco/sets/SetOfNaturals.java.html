@@ -42,42 +42,47 @@ import java.util.Objects;
 
 
 	public boolean intersects(SetOfNaturals subset) {
-<span class="fc" id="L45">		return false;</span>
+<span class="fc bfc" id="L45" title="All 2 branches covered.">		for(Integer x: subset) {</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">			if (this.collection.contains(x)) {</span>
+<span class="fc" id="L47">				return true;</span>
+			}
+<span class="fc" id="L49">		}</span>
+<span class="fc" id="L50">		return false;</span>
 	}
 
 	public boolean contains(Integer element) {
-<span class="fc" id="L49">		return collection.contains(element);</span>
+<span class="fc" id="L54">		return collection.contains(element);</span>
 	}
 
 	@Override
 	public Iterator&lt;Integer&gt; iterator() {
-<span class="fc" id="L54">		return collection.iterator();</span>
+<span class="fc" id="L59">		return collection.iterator();</span>
 	}
 
 
 	@Override
 	public int hashCode() {
-<span class="nc" id="L60">		int hash = 7;</span>
-<span class="nc" id="L61">		hash = 67 * hash + Objects.hashCode(this.collection);</span>
-<span class="nc" id="L62">		return hash;</span>
+<span class="nc" id="L65">		int hash = 7;</span>
+<span class="nc" id="L66">		hash = 67 * hash + Objects.hashCode(this.collection);</span>
+<span class="nc" id="L67">		return hash;</span>
 	}
 
 	@Override
 	public boolean equals(Object obj) {
-<span class="pc bpc" id="L67" title="1 of 2 branches missed.">		if (this == obj) {</span>
-<span class="nc" id="L68">			return true;</span>
+<span class="pc bpc" id="L72" title="1 of 2 branches missed.">		if (this == obj) {</span>
+<span class="nc" id="L73">			return true;</span>
 		}
-<span class="pc bpc" id="L70" title="1 of 2 branches missed.">		if (obj == null) {</span>
-<span class="nc" id="L71">			return false;</span>
+<span class="pc bpc" id="L75" title="1 of 2 branches missed.">		if (obj == null) {</span>
+<span class="nc" id="L76">			return false;</span>
 		}
-<span class="pc bpc" id="L73" title="1 of 2 branches missed.">		if (getClass() != obj.getClass()) {</span>
-<span class="nc" id="L74">			return false;</span>
+<span class="pc bpc" id="L78" title="1 of 2 branches missed.">		if (getClass() != obj.getClass()) {</span>
+<span class="nc" id="L79">			return false;</span>
 		}
 
-<span class="fc" id="L77">		final SetOfNaturals other = (SetOfNaturals) obj;</span>
-<span class="fc" id="L78">		return Objects.equals(this.collection, other.collection);</span>
+<span class="fc" id="L82">		final SetOfNaturals other = (SetOfNaturals) obj;</span>
+<span class="fc" id="L83">		return Objects.equals(this.collection, other.collection);</span>
 	}
 
 
 }
-</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

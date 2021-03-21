@@ -61,6 +61,7 @@ public class SetOfNaturalsTest {
 
     }
 
+    // EXTRA
     @DisplayName("No duplicates should be allowed (single element)")
     @Test
     public void testDuplicateElement() {
@@ -94,6 +95,19 @@ public class SetOfNaturalsTest {
     @Test
     public void testSize() {
         assertEquals(0, setA.size());
+    }
+
+    @DisplayName("Valid Intersection between sets")
+    @Test
+    public void testIntersectForValidIntersection() {
+        assertTrue(setB.intersects(setD), "no intersection but was reported as existing");
+
+    }
+
+    @DisplayName("Invalid Element")
+    @Test
+    public void testAddInvalidElement() {
+        assertThrows(IllegalArgumentException.class, () -> setA.add(-1));
     }
 
 }
