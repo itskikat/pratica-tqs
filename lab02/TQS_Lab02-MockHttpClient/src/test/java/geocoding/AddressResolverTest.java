@@ -2,7 +2,6 @@ package geocoding;
 
 import connection.ISimpleHttpClient;
 import org.json.simple.parser.ParseException;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -15,6 +14,7 @@ import java.net.URISyntaxException;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.ArgumentMatchers.isNull;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -52,4 +52,15 @@ class AddressResolverTest {
         //test
         assertThrows(IndexOutOfBoundsException.class, () -> addressResolver.findAddressForLocation(55555, -66666));
     }
+
+    @Test
+    public void whenNolURL_throwNullPointer() throws IOException, URISyntaxException, ParseException {
+
+        when(simpleHttpClient.get(isNull())).thenThrow(NullPointerException.class);
+
+        //test
+        assertThrows(NullPointerException.class, () -> simpleHttpClient.get(null));
+    }
+
+
 }

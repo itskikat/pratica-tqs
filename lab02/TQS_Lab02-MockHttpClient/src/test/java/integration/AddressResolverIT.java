@@ -41,4 +41,10 @@ public class AddressResolverIT {
 
     }
 
+    @Test
+    public void whenNolURL_throwNullPointer() throws IOException, URISyntaxException, ParseException {
+
+        assertThrows(NullPointerException.class, () -> basicHttpClient.get(null));
+    }
+
 }
