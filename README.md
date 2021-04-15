@@ -6,6 +6,8 @@
 [Lab02 - Mocking dependencies (for unit testing)](https://github.com/itskikat/pratica-tqs/tree/main/lab02)
 <br>
 [Lab03 - Acceptance testing with web automation](https://github.com/itskikat/pratica-tqs/tree/main/lab03)
+<br>
+[Lab04 - Multi-layer application testing (with Spring Boot)](https://github.com/itskikat/pratica-tqs/tree/main/lab04)
 
 
 ----------
