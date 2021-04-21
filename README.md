@@ -8,6 +8,8 @@
 [Lab03 - Acceptance testing with web automation](https://github.com/itskikat/pratica-tqs/tree/main/lab03)
 <br>
 [Lab04 - Multi-layer application testing (with Spring Boot)](https://github.com/itskikat/pratica-tqs/tree/main/lab04)
+<br>
+[Lab05 - Behavior-driven development (Cucumber in Java)](https://github.com/itskikat/pratica-tqs/tree/main/lab05)
 
 
 ----------
