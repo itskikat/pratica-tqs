@@ -6,9 +6,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.ZoneOffset;
+import java.time.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -25,18 +23,19 @@ public class BookSearchSteps {
         return LocalDateTime.of(Integer.parseInt(year), Integer.parseInt(month), Integer.parseInt(day),0, 0);
     }
 
-    @Given("(a|another) book with the title {string}, written by {string}, published in {iso8601Date}")
+    @Given("a book with the title {string}, written by {string}, published in {iso8601Date}")
     public void addNewBook(final String title, final String author, final LocalDateTime published){
         Book book = new Book(title, author, published);
         library.addBook(book);
     }
 
     @When("the customer searches for books published between {int} and {int}")
-    public void setSearchParameters(final LocalDateTime from, final LocalDateTime to){
-        Instant oldfrom = from.toInstant(ZoneOffset.UTC);
-        Date newfrom = Date.from(oldfrom);
-        Instant oldto = to.toInstant(ZoneOffset.UTC);
-        Date newto = Date.from(oldto);
+    public void setSearchParameters(final int from, final int to){
+        // month - day - hr - min
+        LocalDateTime ldt_from = LocalDateTime.of(from, 1, 1, 0, 0);
+        Date newfrom = Date.from(ldt_from.atZone(ZoneId.systemDefault()).toInstant());
+        LocalDateTime ldt_to = LocalDateTime.of(to, 12, 31, 0, 0);
+        Date newto = Date.from(ldt_to.atZone(ZoneId.systemDefault()).toInstant());
 
         result = library.findBooks(newfrom, newto);
     }
@@ -46,7 +45,7 @@ public class BookSearchSteps {
         assertEquals(result.size(), booksFound);
     }
 
-    @And("Book {int} should have the tile {string}")
+    @And("Book {int} should have the title {string}")
     public void verifyBookAtPosition(final int position, final String title){
         assertEquals(result.get(position-1).getTitle(), title);
     }
