@@ -50,4 +50,21 @@ public class BookSearchSteps {
         assertEquals(result.get(position-1).getTitle(), title);
     }
 
+
+    @When("the customer searches for books written by {string}")
+    public void setSearchParamAuthorName(final String author_name){
+        result = library.findBooksByAuthor(author_name);
+    }
+
+
+    @When("the customer searches for books with the title {string}")
+    public void setSearchParamBookTitle(final String book_title){
+        result = library.findBooksByTitle(book_title);
+    }
+
+    @And("Book {int} should have been written by {string}")
+    public void verufyBookAtPositionAuthor(final int position, final String author){
+        assertEquals(result.get(position-1).getAuthor(), author);
+    }
+
 }
