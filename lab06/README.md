@@ -54,11 +54,13 @@ The Maven-based, Java application project selected was *Euromillions*, from the 
   
 
 ![Default Quality Gate](https://i.ibb.co/BGptfy7/image.png)
+
 The (default) defined quality gate considered was the one in the above image. 
 The project did pass it; however, the metrics shown were far bellow the gate values (i.e. Coverage was only 73.5%, and it should be >80% in order to pass; there were no Security Hotspots reviewed.)
 
 
 ![Project Metrics](https://i.ibb.co/1TsLZv9/image.png)
+
 This is due to the fact that Sonar is considering the code for the first time, passing it as it is. 
 
   
@@ -74,8 +76,10 @@ This is due to the fact that Sonar is considering the code for the first time, p
 | ISSUE | PROBLEM DESCRIPTION | HOW TO SOVE |
 | ----- | ------------------- | ----------- |
 | *BUG*   | "Save and reuse this 'Random'" ("Creating a new Random object each time a random value is needed is inefficient and may produce numbers which are not random depending on the JDK.") | "For better efficiency and randomness, create a single Random, then store, and reuse it.” |
-| *VULNERABILITY*     | git diff       | git diff      |
-| *CODE SMELL (MAJOR)*     | git diff       | git diff      |
+| *VULNERABILITY*     | ---       | ---      |
+| *CODE SMELL (MAJOR)*     | "Refactor the code in order to not assign to this loop counter from within the loop body." | "this means that the stop condition is set to a local variable just before the loop begins." |
+| *CODE SMELL (MAJOR)*     | "Replace this use of System.out or System.err by a logger" | "defining and using a dedicated logger is highly recommended to comply with the following requirements (The user must be able to easily retrieve the logs; The format of all logged message must be uniform to allow the user to easily read the log; Logged data must actually be recorded; Sensitive data must only be logged securely)" |
+| *SECURITY HOTSPOT*     | "Make sure that using this pseudorandom number generator is safe here; Using pseudorandom number generators (PRNGs) is security-sensitive" | "Recommended Secure Coding Practices (Use a cryptographically strong random number generator (RNG) like "java.security.SecureRandom" in place of this PRNG; Use the generated random values only once; You should not expose the generated random value. If you have to store it, make sure that the database or file is secure)." |
 
 
 <br>  
