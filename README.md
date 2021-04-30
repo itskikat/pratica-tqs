@@ -10,6 +10,8 @@
 [Lab04 - Multi-layer application testing (with Spring Boot)](https://github.com/itskikat/pratica-tqs/tree/main/lab04)
 <br>
 [Lab05 - Behavior-driven development (Cucumber in Java)](https://github.com/itskikat/pratica-tqs/tree/main/lab05)
+<br>
+[Lab06 - Static Code analysis (with Sonar Qube)](https://github.com/itskikat/pratica-tqs/tree/main/lab06)
 
 
 ----------
