@@ -7,7 +7,9 @@ pipeline {
     stages {
         stage('Install') {
             steps {
-                sh "mvn clean install"
+                dir('lab06/TQS_Lab06-Euromillions/') {
+                    sh "mvn clean install"
+                }  
             }   
             post {
                 always {
