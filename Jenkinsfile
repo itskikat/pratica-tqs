@@ -7,8 +7,9 @@ pipeline {
     stages {
         stage('change directory') {
             steps {
-                dir('lab04/TQS_Lab04-CarInfoSystem')
-                sh '$PWD'
+                dir('lab04/TQS_Lab04-CarInfoSystem'){
+                    sh '$PWD'
+                }
             }
         }
         stage('test java installation') {
